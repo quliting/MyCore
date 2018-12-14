@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FirstProject.Data;
+using FirstProject.Filter;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,8 +29,8 @@ namespace FirstProject
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-             
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddMvc(item => { item.Filters.Add(typeof(GlobalExceptionFilter)); }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddEntityFrameworkMySql().AddDbContext<UserContext>(item =>
                 {
                     item.UseMySql(Configuration.GetConnectionString("MysqlUser"));
@@ -37,7 +38,7 @@ namespace FirstProject
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env,ILoggerFactory iLoggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory iLoggerFactory)
         {
             if (env.IsDevelopment())
             {

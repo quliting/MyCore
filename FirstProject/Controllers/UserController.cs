@@ -6,6 +6,7 @@ using System.Web.Helpers;
 using Microsoft.EntityFrameworkCore;
 using FirstProject.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace FirstProject.Controllers
 {
@@ -14,10 +15,11 @@ namespace FirstProject.Controllers
     public class UserController : BaseController
     {
         private UserContext _userContext;
-
-        public UserController(UserContext userContext)
+        private ILogger<UserController> _logger;
+        public UserController(UserContext userContext,ILogger<UserController> logger)
         {
             _userContext = userContext;
+            _logger = logger;
         }
 
         [Route("/url")]
@@ -35,7 +37,7 @@ namespace FirstProject.Controllers
 
             if (user == null)
             {
-                return NotFound();
+                throw new UserOperationException("用户ID查询失败！");
             }
             return new JsonResult(user);
         }

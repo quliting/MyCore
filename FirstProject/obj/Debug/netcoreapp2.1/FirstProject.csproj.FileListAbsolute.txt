@@ -11,3 +11,4 @@ I:\GitHub\MyCore\FirstProject\obj\Debug\netcoreapp2.1\FirstProject.AssemblyInfo.
 I:\GitHub\MyCore\FirstProject\obj\Debug\netcoreapp2.1\FirstProject.RazorTargetAssemblyInfo.cache
 I:\GitHub\MyCore\FirstProject\obj\Debug\netcoreapp2.1\FirstProject.dll
 I:\GitHub\MyCore\FirstProject\obj\Debug\netcoreapp2.1\FirstProject.pdb
+I:\GitHub\MyCore\FirstProject\obj\Debug\netcoreapp2.1\FirstProject.csprojAssemblyReference.cache
