@@ -30,12 +30,7 @@ namespace FirstProject.Model
         /// <summary>
         /// 格式转换后的文件地址
         /// </summary>
-        public string FromatFilePath { get; set; }
-
-        /// <summary>
-        /// 创建时间
-        /// </summary>
-        public DateTime CreateTime { get; set; }
+        public string FromatFilePath { get; set; } 
 
     }
 }

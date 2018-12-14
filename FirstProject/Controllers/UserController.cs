@@ -20,6 +20,12 @@ namespace FirstProject.Controllers
             _userContext = userContext;
         }
 
+        [Route("/url")]
+        [HttpGet]
+        public string GetUrl()
+        {
+            return "234234";
+        }
         [Route("")]
         [HttpGet]
         public async Task<IActionResult> Get()

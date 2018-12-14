@@ -23,11 +23,16 @@ namespace FirstProject.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<AppUser>().ToTable("Users").HasKey(item => item.Id);
-            modelBuilder.Entity<UserProperty>().ToTable("UserProperties").HasKey(item => new { item.AppUserId, item.Key, item.Value });
-            modelBuilder.Entity<UserTag>().ToTable("UserTag").HasKey(item => new { item.UserId });
 
-            modelBuilder.Entity<UserTag>().ToTable("UserTag").Property(item => item.Tag).HasMaxLength(100);
-            modelBuilder.Entity<BPFile>().ToTable("UserBPFiles").HasKey(item =>new{ item.Id,item.UserId});
+            modelBuilder.Entity<UserProperty>().Property(item => item.Key).HasMaxLength(100);
+            modelBuilder.Entity<UserProperty>().Property(item => item.Value).HasMaxLength(100);
+            modelBuilder.Entity<UserProperty>().ToTable("UserProperties").HasKey(item => new { item.AppUserId, item.Key, item.Value });
+
+            modelBuilder.Entity<UserTag>().Property(item => item.Tag).HasMaxLength(100);
+
+            modelBuilder.Entity<UserTag>().ToTable("UserTag").HasKey(item => new { item.UserId, item.Tag });
+
+            modelBuilder.Entity<BPFile>().ToTable("UserBPFiles").HasKey(item => item.Id);
 
 
             base.OnModelCreating(modelBuilder);

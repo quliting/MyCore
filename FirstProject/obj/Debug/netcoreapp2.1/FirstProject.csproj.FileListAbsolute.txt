@@ -3,7 +3,6 @@ I:\GitHub\MyCore\FirstProject\bin\Debug\netcoreapp2.1\FirstProject.runtimeconfig
 I:\GitHub\MyCore\FirstProject\bin\Debug\netcoreapp2.1\FirstProject.runtimeconfig.dev.json
 I:\GitHub\MyCore\FirstProject\bin\Debug\netcoreapp2.1\FirstProject.dll
 I:\GitHub\MyCore\FirstProject\bin\Debug\netcoreapp2.1\FirstProject.pdb
-I:\GitHub\MyCore\FirstProject\obj\Debug\netcoreapp2.1\FirstProject.csprojAssemblyReference.cache
 I:\GitHub\MyCore\FirstProject\obj\Debug\netcoreapp2.1\FirstProject.csproj.CoreCompileInputs.cache
 I:\GitHub\MyCore\FirstProject\obj\Debug\netcoreapp2.1\FirstProject.RazorAssemblyInfo.cache
 I:\GitHub\MyCore\FirstProject\obj\Debug\netcoreapp2.1\FirstProject.RazorAssemblyInfo.cs

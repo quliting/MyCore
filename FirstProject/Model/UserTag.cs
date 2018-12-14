@@ -8,8 +8,6 @@ namespace FirstProject.Model
     public class UserTag
     {
         public int UserId { get; set; }
-        public string Tag { get; set; }
-
-        public DateTime CreateTime { get; set; }
+        public string Tag { get; set; } 
     }
 }
